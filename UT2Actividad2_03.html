@@ -14,26 +14,26 @@
 
         document.write(`Operación con bucle WHILE:<br>`);
         let i = INICIO; while (i <= FIN) {
-            if ((i % 2 != 0) && (i % 3 == 0) && (i % 7 == 0)) {
-                document.write(`${i}<br>`);
+            if ((i % 2 != 0) && (i % 3 != 0) && (i % 7 != 0)) {
+                document.write(`${i} `);
             }
             i++;
         }
 
         i = INICIO;
-        document.write(`<br>Operación con bucle DO WHILE:<br>`);
+        document.write(`<br><br>Operación con bucle DO WHILE:<br>`);
         do {
-            if ((i % 2 != 0) && (i % 3 == 0) && (i % 7 == 0)) {
-                document.write(`${i}<br>`);
+            if ((i % 2 != 0) && (i % 3 != 0) && (i % 7 != 0)) {
+                document.write(`${i} `);
             }
             i++;
         } while (i <= FIN);
 
         i = INICIO;
-        document.write(`<br>Operación con bucle FOR:<br>`);
+        document.write(`<br><br>Operación con bucle FOR:<br>`);
         for (i; i <= FIN; i++) {
-            if ((i % 2 != 0) && (i % 3 == 0) && (i % 7 == 0)) {
-                document.write(`${i}<br>`);
+            if ((i % 2 != 0) && (i % 3 != 0) && (i % 7 != 0)) {
+                document.write(`${i} `);
             }
         }
     </script>
