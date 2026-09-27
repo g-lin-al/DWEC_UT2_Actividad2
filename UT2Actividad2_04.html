@@ -17,7 +17,42 @@
     • La lógica anterior se repetirá indefinidamente hasta que el usuario pulse la tecla de Salir. -->
 
     <script>
-        
+        let $opcion = "";
+
+        while ($opcion != "d") {
+            $opcion = prompt("a) Área del triángulo (b*h/2)\nb) Área del rectángulo (b*h)\nc) Área del círculo (PI*r2)\nd) Salir\n\n¿Opción?");
+
+            switch ($opcion) {
+                case "a":
+                    let $b_tri = parseInt(prompt("Base:"));
+                    let $h_tri = parseInt(prompt("Altura:"));
+                    let $a_tri = ($b_tri * $h_tri) / 2;
+
+                    console.log(`Área del triángulo con base ${$b_tri} y altura ${$h_tri}: ${$a_tri}.`);
+
+                    $opcion = "";
+                    break;
+                case "b":
+                    let $b_rect = parseInt(prompt("Base:"));
+                    let $h_rect = parseInt(prompt("Altura:"));
+                    let $a_rect = $b_rect * $h_rect;
+
+                    console.log(`Área del rectángulo con base ${$b_rect} y altura ${$h_rect}: ${$a_rect}.`);
+
+                    $opcion = "";
+                    break;
+                case "c":
+                    const PI = 3.1416;
+                    let $r_circ = parseInt(prompt("Radio:"));
+                    let $a_circ = PI * ($r_circ ** 2);
+
+                    console.log(`Área del círculo con radio ${$r_circ}: ${$a_circ}.`);
+
+                    $opcion = "";
+            }
+        }
+
+        document.write("Adiós :))");
     </script>
 </body>
 </html>
