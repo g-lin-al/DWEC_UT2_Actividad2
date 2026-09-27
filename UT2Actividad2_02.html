@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UT2Actividad2_02</title>
+</head>
+<body>
+    <!-- Realiza un programa que calcule el sueldo que le corresponde al trabajador de una empresa que cobra 40.000 euros anuales, el programa debe realizar los cálculos en función de los siguientes criterios:
+    • Si lleva más de 10 años en la empresa se le aplica un aumento del 10%.
+    • Si lleva menos de 10 años, pero más que 5, se le aplica un aumento del 7%.
+    • Si lleva menos de 5 años, pero más que 3, se le aplica un aumento del 5%.
+    • Si lleva menos de 3 años se le aplica un aumento del 3%. -->
+
+    <script>
+        const SUELDO = 40000;
+        let $sueldo_nuevo = 0;
+        let $anios = parseInt(prompt("¿Años en la empresa?"));
+
+        if (($anios > 0) && ($anios < 3)) {
+            $sueldo_nuevo = SUELDO * 1.03;
+        } else if (($anios > 3) && ($anios <= 5)) {
+            $sueldo_nuevo = SUELDO * 1.05;
+        } else if (($anios > 5) && ($anios <= 10)) {
+            $sueldo_nuevo = SUELDO * 1.07;
+        } else if ($anios > 10) {
+            $sueldo_nuevo = SUELDO * 1.1;
+        } else {
+            document.write("Antigüedad no válida.")
+        }
+
+        document.write(`Con un sueldo de ${SUELDO}€ y una antigüedad de ${$anios} años, corresponden ${$sueldo_nuevo}€.`);
+    </script>
+</body>
+</html>
