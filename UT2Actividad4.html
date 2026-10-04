@@ -71,6 +71,20 @@
         // let $segundos_totales = ($minutos * 60) + ($horas * (60 * 2) + ($dias * (60 * 2) * 24));
 
         // document.write(`Segundos totales: ${$segundos_totales}.`);
+
+
+        // // Ejercicio 7
+        let $anio = parseInt(prompt("Año a consultar:"));
+
+        function determinar_bisiesto() {
+            if (($anio % 4 == 0 && $anio % 100 != 0) || ($anio % 400 == 0)) {
+                document.write(`El año ${$anio} es bisiesto.`);
+            } else {
+                document.write(`El año ${$anio} NO es bisiesto.`);
+            }
+        }
+
+        determinar_bisiesto();
     </script>
 </body>
 </html>
